@@ -1,0 +1,59 @@
+form.formulario {
+    max-width: 600px;
+}
+
+form.formulario label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form.formulario select {
+    display: block;
+    margin-bottom: 5px;
+    background-color: #fff;
+    box-sizing: border-box;
+    border-radius: 3px;
+    color: #333;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: block;
+    float: none;
+    border: 1px solid #ccc;
+    padding: 0px 10px;
+    height: 30px;
+    width: 50%;
+    line-height: 1.3;
+}
+
+form.formulario .form-input {
+    padding: 1em;
+}
+
+form.formulario .form-input input[type='text'],
+form.formulario .form-input input[type='email'],
+form.formulario textarea {
+    display: block;
+    width: 100%;
+}
+
+form.formulario .form-input input[type='password']
+{
+    display: block;
+    width: 50%;
+}
+p.exito {
+    font-size: 1.5em;
+    padding: 1em;
+    border: 2px solid green;
+    background: lightgreen;
+    color: black;
+}
+
+p.error {
+    font-size: 1.5em;
+    padding: 1em;
+    border: 2px solid red;
+    background: #ff8787;
+    color: black;
+}

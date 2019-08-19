@@ -11,7 +11,9 @@ function jmmr_mostrar_mensaje_error($mensajeError)
 	  echo "<p class='error'><b>Campo requerido. </b>".$mensajeError ."</p>";		
 }
 
-/** Valida cada uno de los campos del formulario */
+/** Valida cada uno de los campos del formulario 
+ * returna true si algun campo es invalido
+*/
 function jmmr_validar_formulario()
 {
 	if( $_POST['nombre'] == '' || $_POST['nombre'] == ' ' ){
@@ -133,7 +135,7 @@ function jmmr_registrar_usuario()
 if (isset($_POST['submit']) )
 {		
     //validar_password();
-    if (!jmmr_validar_formulario())
+    if (jmmr_validar_formulario())
     {			
         jmmr_mostrar_mensaje_error("Campos no validos. No se puede realizar el registro.");
     } 
@@ -145,7 +147,7 @@ if (isset($_POST['submit']) )
         {
             $db->insert_user(
                 sanitize_text_field($_POST['nombre']), 
-                sanitize_email($_POST['correo']).'hola'
+                sanitize_email($_POST['correo'])
             );             
             $db->desconectar();
         } 

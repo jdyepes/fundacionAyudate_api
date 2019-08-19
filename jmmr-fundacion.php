@@ -4,7 +4,7 @@
 * Plugin Name: JMMR Fundacion Ayudate
 * Plugin URI: https://fundacionayudate.org.ve
 * Description: Modulo que contiene formularios de Historiales clinicos, especialistas y pacientes de la fundacion ayudate
-* Utiliza el shortcode [kfp_aspirante_form] para que el formulario 
+* Utiliza el shortcode [jmmr_<nombre del formulario>_form] para que el formulario 
 * Version: 1.0
 * Author: Jesus Yepes, Minerva Morales, Marco Ali, Roberto Vazquez
 * Author URI: https://fundacionayudate.org.ve

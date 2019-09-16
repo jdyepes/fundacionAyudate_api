@@ -62,4 +62,28 @@ class BaseDatos
             $conexion->close();
         }	
     }
+    //registra paciente
+    public function reg_pac($nombre, $correo){
+        $conexion = $this->conexion;
+            if(!$conexion)
+            {              
+                echo "<p class='error'><b>No se pudo realizar el registro del usuario. </b>".$this->mensajeError ."</p>";
+            }
+            else 
+            {
+                $query="INSERT INTO paciente (nombre,apellido) VALUES ('$nombre', '$correo')";
+    
+                //$ejecutar =mysql_query($query);
+                $ejecutar = $conexion->query($query);
+                if(!$ejecutar=== TRUE){
+                    echo "<p class='error'><b> Hubo un error en </b>" .$query . "<br>" . $conexion->error ."</p>";                    
+                }
+                else {
+                    //echo "Datos guardado correctamente <br> <a href=''>Volver</a>";
+                    //echo '<script language="javascript">alert(" ✔ Datos guardado correctamente ");</script>';			
+                    echo "<p class='exito' <b> ✔ Datos guardado correctamente </b></p>";
+                }
+                $conexion->close();
+            }	
+        }
 }

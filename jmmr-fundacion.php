@@ -31,8 +31,14 @@ add_shortcode('jmmr_registrar_usuario_form_copy', 'Kfp_Aspirante_form_copy');
 //include(JMMR_RUTA . 'forms/jmmr-registro-usuario copy.php');
 
 add_shortcode('jmmr_registrar_paciente_form', 'jmmr_registrar_paciente');
-    include(JMMR_RUTA . 'forms/jmmr-registro-paciente.php');
- 
+   include(JMMR_RUTA . 'forms/jmmr-registro-paciente.php');
+    
+add_shortcode('jmmr_historial_clinico_form', 'jmmr_historial_clinico');
+    include(JMMR_RUTA . 'forms/jmmr-historial-clinico.php');
+
+    add_shortcode('jmmr_perfil_form', 'jmmr_perfil');
+    include(JMMR_RUTA . 'forms/jmmr-perfil.php');
+
 
 
 
